@@ -18,7 +18,7 @@ OPTIONS:
   -d, --disassemble     Display the assembler mnemonics for the machine instructions
   -c, --chr             Display CHR ROM data
   -p, --prg             Display PRG ROM data
-  --help                Display available options
+  -H  --help            Display available options
   -v, --version         Display the version of this program
 ```
 ## Example
@@ -53,12 +53,12 @@ iNES Header:
 ```
 ```asm
 ➜  ~ nobjdump -d sunset.nes
-008000:	40		RTI
-008001:	48		PHA
-008002:	8A		TXA
-008003:	48		PHA
-008004:	98		TYA
-008005:	48		PHA
+008000:	40		    RTI
+008001:	48		    PHA
+008002:	8A		    TXA
+008003:	48		    PHA
+008004:	98		    TYA
+008005:	48		    PHA
 008006:	A9 00 		LDA #$00
 008008:	8D 03 20 	STA $2003
 00800B:	A9 02 		LDA #$02
