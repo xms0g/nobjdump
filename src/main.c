@@ -20,10 +20,10 @@ int main(int argc, char** argv) {
                                "  -d, --disassemble     Display the assembler mnemonics for the machine instructions\n"
                                "  -c, --chr             Display CHR ROM data\n"
                                "  -p, --prg             Display PRG ROM data\n"
-                               "  --help                Display available options\n"
+                               "  -H  --help            Display available options\n"
                                "  -v, --version         Display the version of this program\n";
     if (argc < 3) {
-        if (argc == 2 && !strcmp(argv[1], "--help")) {
+        if (argc == 2 && (!strcmp(argv[1], "-H") || !strcmp(argv[1], "--help"))) {
             printf("%s\n", usage);
         } else if (argc == 2 && (!strcmp(argv[1], "-v") || !strcmp(argv[1], "--version"))) {
             printf("nobjdump version %s\n", VERSION);
