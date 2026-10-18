@@ -15,7 +15,7 @@
 int main(int argc, char** argv) {
     static const char* usage = "OVERVIEW: NES ROM image dumper\n\n"
                                "USAGE: nobjdump [options] <input rom image>\n\n"
-                               "OPTIONS:\n"
+                               "optionS:\n"
                                "  -h, --header          Display iNES header\n"
                                "  -d, --disassemble     Display the assembler mnemonics for the machine instructions\n"
                                "  -c, --chr             Display CHR ROM data\n"
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
         return EXIT_SUCCESS;
     }
 
-    Option opt;
+    option opt;
 
     if (!strcmp(argv[1], "-h") || !strcmp(argv[1], "--header")) {
         opt = HEADER;
@@ -49,10 +49,10 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    opInitTable();
-    decInit(argv[2]);
+    op_init_table();
+    dec_init(argv[2]);
     decode(opt);
-    decExit();
+    dec_exit();
 
     return EXIT_SUCCESS;
 }

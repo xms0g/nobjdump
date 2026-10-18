@@ -10,16 +10,16 @@ typedef enum {
     X_IN_ZP, Y_IN_ZP,
     X_IN_ZP_IND, ZP_IND_Y_IN,
     REL
-} AddressingMode;
+} addressing_mode;
 
 typedef struct {
     const char* format;
-    AddressingMode aMode;
-    uint32_t operandCount;
-} Mnemonic;
+    addressing_mode a_mode;
+    uint32_t operand_count;
+} mnemonic;
 
-void opInitTable();
+void op_init_table();
 
-Mnemonic* opFindMnemonic(uint8_t opcode);
+mnemonic* op_find_mnemonic(uint8_t opcode);
 
 #endif

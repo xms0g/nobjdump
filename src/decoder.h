@@ -6,13 +6,13 @@ typedef enum {
     DISASSEMBLE,
     PRG,
     CHR
-} Option;
+} option;
 
-void decInit(const char* filename);
+void dec_init(const char* filename);
 
-void decExit();
+void dec_exit();
 
-void decode(Option opt);
+void decode(option opt);
 
 #endif
 
